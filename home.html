@@ -1,19 +1,20 @@
-<html>
+<!DOCTYPE HTML>
+<html lang="pt-br">
 <head>
+	<meta charset="UTF-8">
 	<title></title>
 	<script type="text/javascript" src="jquery.min.js"></script>
-	<script type="text/javascript" src="jquery.textarea-1.0.js"></script>
+	<script type="text/javascript" src="1.0/jquery.textarea.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('#teste').textarea({
 				'counter' : '#counter',
 				'bar' : '#cont',
-				'limit' : 100,
+				'limit' : 10,
 				'contLimit': '#limite',
-				'progressive' : false,
-				'prepend' : 'Voce ainda tem: ',
-				'append' : 'caracteres',
-				'over' : true,
+				'progressive' : true,
+				'alert': true,
+				'over': true,
 			});
 		});
 	</script>
@@ -23,8 +24,8 @@
 <textarea id="teste" style="width: 400px;"></textarea>
 
 <div id="counter"></div>
-<div id="cont" style="width: 400px;margin-top: 5px;"></div>
-Limite: <span id="limite"></span>
+<div id="cont" style="width: 400px;margin-top: 5px; background: red;"></div>
+Limite <span id="limite"></span>
 <div id="debug"></div>
 
 </body>
